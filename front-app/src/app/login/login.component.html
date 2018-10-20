@@ -1,0 +1,57 @@
+<div style="text-align:center;" class="white-text">
+  <h1>
+    <div style="font-family: 'Kaushan Script', cursive;">
+      Welcome to <span style="font-family: 'Fascinate Inline', cursive;">TESHUVA</span>
+    </div>
+  </h1>
+</div>
+
+<div class="row" style="text-align:center;">
+  <!-- <div class="col s12 m6 l6">
+    <img width="90%" alt="Angular Logo" src="../../assets/images/logo-1.png">
+  </div> -->
+  <!-- <div class="v-divider hide-on-med-and-down"></div> -->
+  <div class="col s12 m3 l3"></div>
+  <div class="col s12 m6 l6">
+    <form class="row" (submit)="login()" id="login-form" style="font-family: 'Ubuntu Condensed', sans-serif;">
+      <div class="input-field col s12">
+        <input type="text" id="name" class="validate white-text" [(ngModel)]="user.name" [ngModelOptions]="{standalone: true}">
+        <label for="name" data-error="wrong" data-success="right">Name</label>
+      </div>
+      <div class="input-field col s12">
+        <input type="text" id="phone" class="validate white-text" [(ngModel)]="user.phone" [ngModelOptions]="{standalone: true}">
+        <label for="phone" data-error="wrong" data-success="right">Phone</label>
+      </div>
+      <div class="input-field col s12">
+        <select [(ngModel)]="user.church" [ngModelOptions]="{standalone: true}">
+          <option value="" disabled selected>Select your church</option>
+          <option value="1">Ayapakkam</option>
+          <option value="2">Melpakkam</option>
+          <option value="3">Thiruverkadu</option>
+          <option value="4">Moondru Nagar</option>
+          <option value="5">Paruthipattu</option>
+        </select>
+      </div>
+      <div class="input-field col s12 center-align">
+        <button id="submit-btn" style="width: 100%; font-family: 'Kaushan Script', cursive;" class="white indigo-text darken-4 btn waves-effect waves-light"
+          type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+        </button>
+        <div class="preloader-wrapper">
+          <div class="spinner-layer spinner-yellow-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="col s12 m3 l3"></div>
+</div>

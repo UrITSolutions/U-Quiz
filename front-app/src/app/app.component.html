@@ -1,0 +1,43 @@
+<nav class="transparent z-depth-0" style="font-family: 'Pacifico', cursive;">
+  <div class="nav-wrapper" style="padding-left: 4%; padding-right: 1%">
+    <a href="#!" class="brand-logo" style="height: 100%;">
+      <img src="../assets/images/logo-2.png" height="140%" alt="">
+    </a>
+    <a *ngIf="user" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down" *ngIf="user">
+      <li class="nav-active" *ngIf="user.phone === '9489547615'"><a  routerLink="/home">Home</a></li>
+      <li *ngIf="user.phone === '9489547615'"><a routerLink="/login" routerLinkActive="active">Login</a></li>
+      <!-- <li><a routerLink="/books">Books</a></li>
+      <li><a class="dropdown-trigger" data-target="admin-dropdown">Admin<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a routerLink="/profile">Profile</a></li> -->
+      <li *ngIf="user.phone === '9489547615'"><a routerLink="/reports">Reports</a></li>
+      <li><a (click)="logout()">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Dropdown Structure -->
+<!-- <ul id="admin-dropdown" class="dropdown-content">
+  <li><a class="indigo-text darken-4" routerLink="/bookMaster">Book Master</a></li>
+  <li><a class="indigo-text darken-4" routerLink="/readerMaster">Reader Master</a></li>
+  <li><a class="indigo-text darken-4" routerLink="/reports">Reports</a></li>
+</ul> -->
+
+<ul id="admin-dropdown-side-nav" class="dropdown-content">
+  <li><a routerLink="/bookMaster" class="sidenav-close">Book Master</a></li>
+  <li><a routerLink="/readerMaster" class="sidenav-close">Reader Master</a></li>
+  <li><a routerLink="/reports" class="sidenav-close">Reports</a></li>
+</ul>
+
+<ul class="sidenav" id="mobile-demo" style="font-family: 'Ubuntu Condensed', sans-serif;">
+  <li *ngIf="user.phone === '9489547615'" class="nav-active"><a  routerLink="/home">Home</a></li>
+  <li *ngIf="user.phone === '9489547615'"><a routerLink="/login" routerLinkActive="active">Login</a></li>
+  <!-- <li><a routerLink="/books">Books</a></li>
+  <li><a class="dropdown-trigger" data-target="admin-dropdown">Admin<i class="material-icons right">arrow_drop_down</i></a></li>
+  <li><a routerLink="/profile">Profile</a></li> -->
+  <li *ngIf="user.phone === '9489547615'"><a routerLink="/reports">Reports</a></li>
+  <li><a (click)="logout()">Logout</a></li>
+</ul>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

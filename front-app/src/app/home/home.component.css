@@ -1,0 +1,11 @@
+@font-face
+{
+    font-family: myTamilFont;
+    src: url(/assets/fonts/Bamini/Tamil\ 2016\ Bam.ttf);
+}
+ 
+form div
+{
+    font-family: myTamilFont;
+}
+

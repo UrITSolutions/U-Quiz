@@ -1,0 +1,10 @@
+.gr-sublime-light{
+    background: #fc5c7d; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fc5c7d, #6a82fb); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fc5c7d, #6a82fb);
+}
+.gr-celestial{
+    background: #c33764; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #c33764, #1d2671); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #c33764, #1d2671); 
+}

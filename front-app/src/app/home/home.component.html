@@ -1,0 +1,59 @@
+<br><br>
+<div class="container">
+    <div class="card-panel hoverable">
+        <div style="font-family: 'Luckiest Guy', cursive;font-size: 22px" class="center-align">
+            Hi {{user.name}} !!
+        </div>
+    </div>
+    <form #quizForm="ngForm" (submit)="submit(quizForm.value)">
+        <div class="card-panel hoverable row" *ngFor="let question of questions; let index = index;">
+            <div class="col s12 m12 l12" style="font-family: myTamilFont; font-size: 19px">
+                <strong>{{question[0]}}. {{question[1]}}</strong>
+                <br>
+                <br>
+                <div class="divider"></div>
+            </div>
+            <div style="font-family: 'Acme', sans-serif;">
+                <p class="col s12 m6 l6">
+                    <label>
+                        <input name="{{question[0]}}" value="1" type="radio" ngModel />
+                        <span style="font-family: myTamilFont; font-size: 18px">{{question[2]}}</span>
+                    </label>
+                </p>
+                <p class="col s12 m6 l6">
+                    <label>
+                        <input name="{{question[0]}}" value="2" type="radio" ngModel />
+                        <span style="font-family: myTamilFont; font-size: 18px">{{question[3]}}</span>
+                    </label>
+                </p>
+                <p class="col s12 m6 l6">
+                    <label>
+                        <input name="{{question[0]}}" value="3" type="radio" ngModel />
+                        <span style="font-family: myTamilFont; font-size: 18px">{{question[4]}}</span>
+                    </label>
+                </p>
+                <p class="col s12 m6 l6">
+                    <label>
+                        <input name="{{question[0]}}" value="4" type="radio" ngModel />
+                        <span style="font-family: myTamilFont; font-size: 18px">{{question[5]}}</span>
+                    </label>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <button class="waves-effect waves-dark btn white black-text" style="width: 100%" type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div id="overlay">
+    <br><br><br><br><br>
+    <div id="start-card" class="container" style="opacity: 1; top: 200px">
+        <div class="card-panel center-align">
+            <h3>Welcome to the Quiz</h3>
+            <p>Click on start.</p>
+            <button id="start-btn" class="btn waves-effect waves-light purple darken-4">Start Quiz</button>
+        </div>
+    </div>
+</div>
